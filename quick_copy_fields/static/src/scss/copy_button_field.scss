@@ -1,0 +1,32 @@
+.o_quick_copy_field {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.o_quick_copy_icon {
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.15s ease, color 0.2s ease, transform 0.15s ease;
+    cursor: pointer;
+    color: var(--text-muted, #8f8f8f);
+    margin-left: 4px;
+}
+
+.o_quick_copy_field:hover .o_quick_copy_icon {
+    opacity: 1;
+}
+
+.o_quick_copy_icon:hover {
+    color: var(--primary, #714B67);
+}
+
+/* Force the checkmark confirmation to stay visible for its full
+   duration even if the pointer leaves the field right after the
+   click (otherwise the hover-only opacity rule above would hide
+   the confirmation instantly). */
+.o_quick_copy_icon_copied {
+    opacity: 1 !important;
+    transform: scale(1.15);
+}

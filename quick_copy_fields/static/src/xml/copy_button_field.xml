@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="quick_copy_fields.CopyButtonField">
+        <span class="o_quick_copy_field">
+            <span class="o_quick_copy_value" t-esc="value"/>
+            <i t-att-class="state.copied ? 'fa fa-check text-success o_quick_copy_icon o_quick_copy_icon_copied' : 'fa fa-clone o_quick_copy_icon'"
+               t-on-click="onCopyClick"
+               t-att-title="state.copied ? 'Copied' : 'Copy to clipboard'"
+               role="button"/>
+        </span>
+    </t>
+</templates>
