@@ -1,0 +1,35 @@
+{
+    'name': 'Quick Copy Fields',
+    'version': '19.0.1.0.0',
+    'category': 'Extra Tools',
+    'summary': 'One-click copy buttons for order references, SKU, invoice numbers, phone, and email fields',
+    'description': 'Adds small copy-to-clipboard icons next to key reference fields (Sales Orders, Purchase Orders, Inventory Transfers, Product reference/SKU, Invoices/Bills, and Phone/Email on contacts) so staff can copy values instantly.',
+    'author': 'Supadev AI',
+    'license': 'LGPL-3',
+    'depends': [
+        'base',
+        'sale',
+        'purchase',
+        'stock',
+        'account',
+        'contacts',
+        'product',
+    ],
+    'data': [
+        'views/sale_order_views.xml',
+        'views/purchase_order_views.xml',
+        'views/stock_picking_views.xml',
+        'views/product_views.xml',
+        'views/account_move_views.xml',
+        'views/res_partner_views.xml',
+    ],
+    'assets': {
+        'web.assets_backend': [
+            'quick_copy_fields/static/src/js/copy_button_field.js',
+            'quick_copy_fields/static/src/xml/copy_button_field.xml',
+            'quick_copy_fields/static/src/scss/copy_button_field.scss',
+        ],
+    },
+    'application': 'False)',
+    'installable': True,
+}

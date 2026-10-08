@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+        <record id="view_partner_form_quick_copy" model="ir.ui.view">
+            <field name="name">res.partner.form.quick.copy</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='phone'] | //field[@name='mobile']" position="attributes">
+                    <attribute name="widget">quick_copy_field</attribute>
+                </xpath>
+                <xpath expr="//field[@name='email'] | //field[@name='vat']" position="attributes">
+                    <attribute name="widget">quick_copy_field</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_partner_tree_quick_copy" model="ir.ui.view">
+            <field name="name">res.partner.list.quick.copy</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='phone'] | //field[@name='email']" position="attributes">
+                    <attribute name="widget">quick_copy_field</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_partner_kanban_view_quick_copy" model="ir.ui.view">
+            <field name="name">res.partner.kanban.quick.copy</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='phone'] | //field[@name='email']" position="attributes">
+                    <attribute name="widget">quick_copy_field</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
