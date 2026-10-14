@@ -30,6 +30,6 @@
             'quick_copy_fields/static/src/scss/copy_button_field.scss',
         ],
     },
-    'application': 'False)',
+    'application': 'False',
     'installable': True,
 }
